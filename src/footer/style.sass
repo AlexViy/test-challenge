@@ -1,0 +1,75 @@
+@import ../defaults
+.footer
+  display: flex
+  flex-direction: column
+  background-color: $dark
+  @media(min-width: $tablet)
+    flex-direction: row
+    justify-content: space-between
+
+  .copyright
+    white-space: nowrap
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-basis: 33%
+    font-size: 12px
+    font-weight: 100
+    color: #eee
+    background: rgb(67, 156, 146)
+    padding: 16px
+    text-align: center
+    @media(min-width: $tablet)
+      background: $dark
+      justify-content: flex-start
+
+  .social
+    flex-basis: 33%
+    padding: 16px
+    background: #eee
+    text-align: center
+    @media(min-width: $tablet)
+      background: $dark
+
+    .icon
+      margin-left: 16px
+      filter: contrast(1%)
+      @media(min-width: $tablet)
+        filter: contrast(100%)
+
+  .made-by
+    flex-basis: 33%
+    display: flex
+    background: #333
+    padding: 16px
+    font-weight: 500
+    color: rgba(255,255,255,.54)
+    justify-content: center
+    @media(min-width: $tablet)
+      background: $dark
+      justify-content: flex-end
+
+    .logo
+      *
+        vertical-align: middle
+
+      .by
+        text-transform: lowercase
+        font-family: Lato
+
+      .logotype
+        font-weight: 700
+
+      .bubble
+        display: inline-block
+        width: 10px
+        height: 10px
+        border-radius: 50%
+
+      .green-bubble
+        background: rgb(135,195,54)
+
+      .blue-bubble
+        border: 4px solid rgb(179,213,209)
+        width: 12px
+        height: 12px
