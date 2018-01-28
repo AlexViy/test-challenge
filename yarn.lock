@@ -1730,7 +1730,7 @@ gulp-cache@^0.4.1:
     try-json-parse "^0.1.1"
     vinyl "^1.1.0"
 
-gulp-concat@^2.5.2:
+gulp-concat@^2.5.2, gulp-concat@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/gulp-concat/-/gulp-concat-2.6.1.tgz#633d16c95d88504628ad02665663cee5a4793353"
   dependencies:
