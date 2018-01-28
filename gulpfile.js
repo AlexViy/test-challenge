@@ -12,6 +12,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var gulpConcat = require('gulp-concat');
 
 var path = {
   base: './src',
@@ -99,6 +100,7 @@ gulp.task('clean', function() {
 // Tranfers JS file to dist
 gulp.task('js', function () {
   return gulp.src(path.base + '/**/*.js')
+    .pipe(gulpConcat('scripts.js'))
     .pipe( gulp.dest(path.dest) );
 });
 
