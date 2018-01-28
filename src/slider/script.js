@@ -1,7 +1,7 @@
 let arrLeft = document.querySelector(".arrow-left");
 let arrRight = document.querySelector(".arrow-right");
 let slider = document.querySelector(".slider");
-let pos = 0;
+let possition = 0;
 let currentSlide = 0;
 let percents = 100;
 let number = document.querySelector(".slides-number")
@@ -14,21 +14,21 @@ function whichOne(e) {
   if (e.target.classList.contains("arrow-right")) {
     moveLeft();
   } else {
-    // moveRight();
-    console.log('Left click')
+    moveRight();
   }
 }
 
 function moveLeft(){
-  if(currentSlide < slidesAmount) {
+  if(currentSlide < slidesAmount-1) {
+
+    currentSlide++;
+    number.innerHTML = currentSlide +1;
     let anim = setInterval(moveIt, 8);
-    currentSlide--;
 
     function moveIt() {
-      if (pos !== currentSlide*percents) {
-        number.innerHTML = currentSlide +1;
-        pos--;
-        slider.style.marginLeft = pos + "%";
+      if (possition !== -currentSlide*percents) {
+        possition--;
+        slider.style.marginLeft = possition + "%";
       } else {
         clearInterval(anim);
       }
@@ -37,16 +37,21 @@ function moveLeft(){
 
 }
 
-// function moveRight() {
-//   increment -= percents;
-//   let anim = setInterval(moveIt, 8);
-//   function moveIt() {
-//     if (pos < increment*percents) {
-//       number.innerHTML = increment +1;
-//       pos++;
-//       slider.style.marginLeft = pos + "%";
-//     } else {
-//       clearInterval(anim);
-//     }
-//   }
-// }
+function moveRight() {
+
+  if(currentSlide !== 0) {
+
+    currentSlide--;
+    number.innerHTML = currentSlide +1;
+    let anim = setInterval(moveIt, 8);
+
+    function moveIt() {
+      if (possition !== -currentSlide*percents) {
+        possition++;
+        slider.style.marginLeft = possition + "%";
+      } else {
+        clearInterval(anim);
+      }
+    }
+  }
+}
