@@ -1,27 +1,35 @@
-.header
-  .logo
-    .icon
-      img(src="./icons/lg/UDG_01_lg_0001s_0000s_0000s_0000_logo.png")
-    .title
-      p Urban 
-      p Development 
-      p Group
-  .menu
-    ul.navigation
-      li 
-        a(href="#") Home
-      li 
-        a(href="#") About Us
-      li 
-        a(href="#") Projects
-      li 
-        a(href="#") Clients
-      li 
-        a(href="#") Partners
-      li 
-        a(href="#") News
-      li.lang
-        a(href="#") en
-      li 
-        a(href="#") 
-        img(src="./icons/lg/UDG_01_lg_0001s_0000s_0001s_0009_search-interface-symbol.png")
+.head-wrapper
+  .header
+    .logo
+      .icon
+        img.img(src="./icons/lg/logo.png")
+      .title
+        p Urban 
+        p Development 
+        p Group
+        
+    .menu
+      .navigation
+        ul
+          li 
+            a(href="#") Home
+          li 
+            a(href="#") About Us
+          li 
+            a(href="#") Projects
+          li 
+            a(href="#") Clients
+          li 
+            a(href="#") Partners
+          li 
+            a(href="#") News
+            
+      .controls    
+        .item.lang
+          a(href="#") En
+        .item.search
+          a(href="#") 
+            img(src="./icons/lg/search.png")
+        .item.drawer
+          include ../components/menubtn/tpl
+              
