@@ -51,6 +51,7 @@ function moveRight() {
         slider.style.marginLeft = possition + "%";
       } else {
         clearInterval(anim);
+
       }
     }
   }

@@ -1,40 +1,104 @@
-.header
+@import ../components/menubtn/style
+
+.head-wrapper
+  padding: 8px 16px
   position: absolute
-  color: white
-  padding: 20px 40px
-  display: flex
-  flex-direction: row
-  justify-content: space-between
   top: 0
   left: 0
   right: 0
+  @media(min-width: $desktop)
+    padding: 20px 40px
 
-.logo
-  text-transform: uppercase
+.header
+  color: white
+  padding-bottom: 14px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid rgba(255,255,255,.34)
+  @media(min-width: $desktop)
+    border-bottom: none
+  a
+    text-decoration: none
+    color: #ecf0e8
+  .logo
+    display: flex
+    align-items: center
+    text-transform: uppercase
 
-.menu
-  margin-top: 16px
+    .icon
+      width: 54px
+      .img
+        width: 100%
 
-.title
-  margin-left: 30px
+    .title
+      font-size: 10px
+      font-weight: 300
+      margin-left: 16px
 
-.navigation
-  li
-    display: inline
-    list-style-type: none
-    margin-left: 42px
-    padding-top: 8px
-    &:hover
-      border-top: 1px solid white
-    a
-      text-decoration: none
-      color: #ecf0e8
+    @media(min-width: $desktop)
+      flex-direction: column
+      .icon
+        width: auto
+      .title
+        font-size: 12px
 
-  .lang
-    border: 1px solid transparent
-    padding: 8px
-    margin-left: 34px
-    &:hover
-      border: 1px solid white
-      padding: 8px
+  .menu
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+
+    .navigation
+      display: none
+      @media(min-width: $tablet)
+        display: flex
+        align-items: center
+
+      li
+        display: inline
+        list-style-type: none
+        margin-left: 20px
+        padding-top: 8px
+        @media(min-width: $desktop)
+          margin-left: 44px
+          &:first-child
+            border-top: 1px solid $greenish
+
+        a
+          text-decoration: none
+          color: #ecf0e8
+
+    .controls
+      margin-left: 8px
+      display: flex
+      align-items: center
+
+      .item
+        margin-left: 16px
+
+      .search
+        padding-left: 12px
+        padding-right: 12px
+        border-left: 1px solid
+        border-right: 1px solid
+        @media(min-width: $tablet)
+          border-right: none
+          padding-right: 0
+        @media(min-width: $desktop)
+          border-left: none
+
+      .drawer
+        @media(min-width: $tablet)
+          display: none
+
+    .lang
+      font-size: 14px
+      border: 1px solid $greenish
+      padding: 4px
       margin-left: 34px
+      @media(min-width: $desktop)
+        text-transform: lowercase
+        font-size: 16px
+        padding: 8px
