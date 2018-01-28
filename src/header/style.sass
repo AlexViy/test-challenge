@@ -6,17 +6,16 @@
   top: 0
   left: 0
   right: 0
+  @media(min-width: $desktop)
+    padding: 20px 40px
 .header
   color: white
-  padding-bottom: 16px
+  padding-bottom: 14px
   display: flex
   flex-direction: row
   justify-content: space-between
   align-items: center
-
-  border-bottom: 1px solid #eee
-  @media(min-width: $tablet)
-    padding: 20px 40px
+  border-bottom: 1px solid rgba(255,255,255,.34)
 
   a
     text-decoration: none
@@ -44,10 +43,13 @@
 
     .navigation
       display: none
+      @media(min-width: $tablet)
+        display: flex
+        align-items: center
       li
         display: inline
         list-style-type: none
-        margin-left: 42px
+        margin-left: 20px
         padding-top: 8px
         &:hover
           border-top: 1px solid white
@@ -56,6 +58,7 @@
           color: #ecf0e8
 
     .controls
+      margin-left: 8px
       display: flex
       align-items: center
       .item
@@ -65,6 +68,12 @@
         padding-right: 12px
         border-left: 1px solid
         border-right: 1px solid
+        @media(min-width: $tablet)
+          border-right: none
+          padding-right: 0
+      .drawer
+        @media(min-width: $tablet)
+          display: none
 
     .lang
       font-size: 14px
