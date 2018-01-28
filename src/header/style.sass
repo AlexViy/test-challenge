@@ -1,40 +1,75 @@
-.header
+@import ../components/menubtn/style
+
+.head-wrapper
+  padding: 8px 16px
   position: absolute
-  color: white
-  padding: 20px 40px
-  display: flex
-  flex-direction: row
-  justify-content: space-between
   top: 0
   left: 0
   right: 0
+.header
+  color: white
+  padding-bottom: 16px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
 
-.logo
-  text-transform: uppercase
+  border-bottom: 1px solid #eee
+  @media(min-width: $tablet)
+    padding: 20px 40px
 
-.menu
-  margin-top: 16px
+  a
+    text-decoration: none
+    color: #ecf0e8
+  .logo
+    display: flex
+    align-items: center
+    text-transform: uppercase
 
-.title
-  margin-left: 30px
+    .icon
+      width: 54px
+      .img
+        width: 100%
 
-.navigation
-  li
-    display: inline
-    list-style-type: none
-    margin-left: 42px
-    padding-top: 8px
-    &:hover
-      border-top: 1px solid white
-    a
-      text-decoration: none
-      color: #ecf0e8
+    .title
+      font-size: 10px
+      font-weight: 300
+      margin-left: 16px
 
-  .lang
-    border: 1px solid transparent
-    padding: 8px
-    margin-left: 34px
-    &:hover
-      border: 1px solid white
-      padding: 8px
+  .menu
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+
+    .navigation
+      display: none
+      li
+        display: inline
+        list-style-type: none
+        margin-left: 42px
+        padding-top: 8px
+        &:hover
+          border-top: 1px solid white
+        a
+          text-decoration: none
+          color: #ecf0e8
+
+    .controls
+      display: flex
+      align-items: center
+      .item
+        margin-left: 16px
+      .search
+        padding-left: 12px
+        padding-right: 12px
+        border-left: 1px solid
+        border-right: 1px solid
+
+    .lang
+      font-size: 14px
+      border: 1px solid $greenish
+      padding: 4px
       margin-left: 34px
+      @media(min-width: $desktop)
+        text-transform: lowercase
