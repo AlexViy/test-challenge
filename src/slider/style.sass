@@ -10,29 +10,23 @@
     width: 100%
     height: 50vh
 
-  .slide1
-    background: url("/icons/lg/UDG_01_lg_0001s_0003s_0000_mask.png") center no-repeat, url("/icons/lg/UDG_01_lg_0001s_0003s_0001_bg.png") center no-repeat
-    min-height: 800px
-    background-position: center
-    background-size: cover
+  .slide1, .slide2, .slide3, .slide4
+    background: url("/icons/xs/bg_sm.png") no-repeat
+    min-height: 480px
 
-  .slide2
-    background: url("/icons/lg/UDG_01_lg_0001s_0003s_0000_mask.png") center no-repeat, url("/icons/lg/UDG_01_lg_0001s_0003s_0001_bg.png") center no-repeat
-    min-height: 800px
-    background-position: center
-    background-size: cover
+    @media(min-width: 321px)
+      background: url("/icons/sm/bg_tablet.png") no-repeat
+      min-height: 750px
 
-  .slide3
-    background: url("/icons/lg/UDG_01_lg_0001s_0003s_0000_mask.png") center no-repeat, url("/icons/lg/UDG_01_lg_0001s_0003s_0001_bg.png") center no-repeat
-    min-height: 800px
-    background-position: center
-    background-size: cover
 
-  .slide4
-    background: url("/icons/lg/UDG_01_lg_0001s_0003s_0000_mask.png") center no-repeat, url("/icons/lg/UDG_01_lg_0001s_0003s_0001_bg.png") center no-repeat
-    min-height: 800px
-    background-position: center
-    background-size: cover
+    @media(min-width: 769px)
+      background: url("/icons/lg/UDG_01_lg_0001s_0003s_0000_mask.png") center no-repeat, url("/icons/lg/UDG_01_lg_0001s_0003s_0001_bg.png") center no-repeat
+      min-height: 800px
+      background-position: center
+      background-size: cover
+
+
+
 
 .controls
   .title
